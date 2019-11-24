@@ -1,0 +1,16 @@
+<!--pages/auth/auth.wxml-->
+<view class="container">
+  <view class="user-box">
+    <view class="user-text">
+      点击授权按钮以授权用户信息
+    </view>
+    <view class="user-head">
+      <image class="wxhead" src="../../static/icon/wx.png"></image>
+      <view class="wxtext">=></view>
+      <image class="qlhead" src="../../static/icon/ql.png"></image>
+    </view>
+    <view class="user-btn">
+      <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+    </view>
+  </view>
+</view>

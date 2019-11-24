@@ -1,0 +1,58 @@
+<view class="container">
+  <view>
+    <searchNav bind:size="handleNavSize" bind:change="handleKeywordsChange" value="{{keywords}}" />
+  </view>
+  <view class="manage">
+    <view class="manage-left">
+      <view class="manage-left-type">
+        <view class="left-type-text">全部类目</view>
+        <image class="left-type-img" src="{{url}}/resource/img/weixin/xcx/collect/down@2x.png"></image>
+      </view>
+      <view class="manage-left-type">
+        <view class="left-type-text">价格</view>
+        <image class="left-type-img" src="{{url}}/resource/img/weixin/xcx/collect/down@2x.png"></image>
+      </view>
+      <view class="manage-left-type">
+        <view class="left-type-text">销量</view>
+      </view>
+    </view>
+    <view class="container-manage-right">
+      <image class="manage-right-img" src="{{url}}/resource/img/weixin/xcx/index/goumai@2x.png"></image>
+    </view>
+  </view>
+  <scroll-view scroll-y style="height:calc(100% - {{navH}}px - 40px)">
+    <view class="search-res">
+    <block wx:for="{{arr}}" wx:index="{{index}}">
+      <view class="search-res-item" data-index="{{index}}" bindtap="goDetails">
+        <image class="search-res-item-img" src="{{item.picture}}"></image>
+        <view class="search-res-item-info">
+          <view class="search-res-item-title">{{item.commodityName}}</view>
+          <view class="search-res-item-label">
+            <view class="saerch-res-item-label-ora">500g</view>
+            <view class="search-res-item-label-gre">进口</view>
+          </view>
+          <view class="search-res-item-price">
+            <view class="seach-res-item-price-rmb">
+              {{item.discountPrice}}
+            </view>
+            <view class="search-res-item-price-quantity">/500g</view>
+          </view>
+          <view class="search-res-item-bot">
+            <view class="search-res-item-bot-left">
+              <view class="search-res-item-bot-num">
+                80评价
+              </view>
+              <view class="search-res-item-bot-num">
+                98%好评
+              </view>
+            </view>
+            <view class="search-res-item-bot-right">
+              <image class="search-res-item-bot-img" src="{{url}}/resource/img/weixin/xcx/search/Theshoppingcart_02@2x.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,156 @@
+<!--pages/details/details.wxml-->
+<view class="container">
+  <view class="details-ify">
+    <view bindtap="anchorTo" class="{{toViewClass == 'anchor-0'?'details-ify-select' : ''}}" data-id="anchor-0">商品</view>
+    <view bindtap="anchorTo" class="{{toViewClass == 'anchor-1'?'details-ify-select' : ''}}" data-id="anchor-1">评价</view>
+    <view bindtap="anchorTo" class="{{toViewClass == 'anchor-2'?'details-ify-select' : ''}}" data-id="anchor-2">详情</view>
+  </view>
+  <scroll-view enable-flex scroll-y class="details" scroll-into-view="{{toView}}" scroll-with-animation="true" bindscroll="scroll">
+    <view class="detail-merchandise" id="anchor-0">
+      <image class="merchandise-img" src="{{detailShopping.picture}}"></image>
+      <view class="merchandise-message">
+        <view class="merchandise-title">{{detailShopping.commodityName}}</view>
+        <view class="merchandise-introduce">{{detailShopping.description}}</view>
+        <view class="merchandise-label">
+          <view class="merchandise-activity">买一赠一</view>
+          <view class="merchandise-delivery">明日送达</view>
+        </view>
+        <view class="merchandise-market">
+          <view class="merchandise-selling">
+            <view class="merchandise-price">￥{{detailShopping.currentPrice}}</view>
+            <view class="merchandise-quantity">/500g</view>
+          </view>
+          <view class="merchandise-sales">月销10221单</view>
+        </view>
+      </view>
+    </view>
+    <view class="details-address" bindtap="goSite">
+      <view class="address-message">
+        <view class="address-message-top">
+          <view class="address-message-name">地址：</view>
+          <view class="address-message-info">{{addr[0].address}}</view>
+        </view>
+        <view class="address-message-bot">
+          <view class="address-message-name">时间：</view>
+          <view class="address-message-info">5:30分之前送达</view>
+        </view>
+      </view>
+      <image class="address-arrows" src="../../static/icon/all@2x.png"></image>
+    </view>
+    <view class="details-introduce">
+      <view class="introduce-item">
+        <image class="introduce-item-img" src="../../static/icon/Replacement@2x.png"></image>
+        <view class="introduce-item-text">24小时退换货</view>
+      </view>
+      <view class="introduce-item">
+        <image class="introduce-item-img" src="../../static/icon/Safetydetection@2x.png"></image>
+        <view class="introduce-item-text">安全检测</view>
+      </view>
+      <view class="introduce-item">
+        <image class="introduce-item-img" src="../../static/icon/Basedirectsupply@2x.png"></image>
+        <view class="introduce-item-text">基地直供</view>
+      </view>
+      <view class="introduce-item">
+        <image class="introduce-item-img" src="../../static/icon/Coldstorage@2x.png"></image>
+        <view class="introduce-item-text">全程冷链</view>
+      </view>
+    </view>
+    <view class="details-evaluate" id="anchor-1">
+      <view class="evaluate-top">
+        <view class="evaluate-title">评价({{evaluate.length}})</view>
+        <view class="evaluate-all">
+          <view class="evaluate-all-text">全部评价</view>
+          <image class="evaluate-all-img" src="../../static/icon/all@2x.png"></image>
+        </view>
+      </view>
+      <view class="evaluate-info">
+        <view class="evaluate-head"></view>
+        <view class="evaluate-right">
+          <view class="evaluate-top">
+            <view class="evaluate-message">
+              <view class="evaluate-name">{{evaluate[0].username}}</view>
+              <view class="evaluate-star">
+                <image class="evaluate-star-img" src="../../static/icon/star@2x.png"></image>
+                <image class="evaluate-star-img" src="../../static/icon/star@2x.png"></image>
+                <image class="evaluate-star-img" src="../../static/icon/star@2x.png"></image>
+                <image class="evaluate-star-img" src="../../static/icon/star@2x.png"></image>
+                <image class="evaluate-star-img" src="../../static/icon/star@2x.png"></image>
+              </view>
+            </view>
+            <view class="evaluate-time">{{evaluate[0].date}}</view>
+          </view>
+          <view class="evaluate-intro">{{evaluate[0].content}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="details-information" id="anchor-2">
+      <view class="information-title">详情</view>
+      <view class="information-main">
+        <view class="information-left">
+          <view>品牌名称：{{mydetail.brandName}}</view>
+          <view>运输方式：{{mydetail.transport}}</view>
+          <view>使用的相关法规：{{mydetail.regulation}}</view>
+          <view>原料表：澳洲谷饲黑牛</view>
+          <view>食品添加剂：无任何添加剂</view>
+          <view>是否为有机食品：{{mydetail.organicFood}}</view>
+          <view>同城服务：{{mydetail.cityService}}</view>
+        </view>
+        <view class="information-right">
+          <view>产地：{{mydetail.foodAdditive}}</view>
+          <view>储藏方式：{{mydetail.precautions}}</view>
+          <view>包装方式：{{mydetail.packing}}</view>
+          <view>保质期：{{mydetail.shelfLife}}</view>
+          <view>净含量：{{mydetail.netWeight}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="mine-recommend">
+      <view class="mine-recommend-title">
+        <view class="mine-recommend-title-img"></view>
+        <view class="mine-recommend-title-text">优惠打折 · </view>
+        <view class="mine-recommend-title-eng">DISCOUNT</view>
+        <view class="mine-recommend-title-img"></view>
+      </view>
+      <view class="mine-recommend-main">
+        <block wx:for="{{dzSource}}" wx:key="{{index}}">
+          <view class="mine-recommend-main-item" data-index="{{index}}" bindtap="goDetails">
+            <image class="mine-recommend-main-img" src="{{item.picture}}"></image>
+            <view class="mine-recommend-main-title">{{item.commodityName}}</view>
+            <view class="mine-recommend-main-des">{{item.description}}</view>
+            <view class="mine-recommend-main-label">
+              <view class="mine-recommend-main-label-first">买1赠1</view>
+              <view class="mine-recommend-main-label-second">明日送达</view>
+            </view>
+            <view class="mine-recommend-main-price">
+              <view class="mine-recommend-main-newprice">￥{{item.discountPrice}}</view>
+              <view class="mine-recommend-main-quantity">/500g</view>
+              <view class="mine-recommend-main-oldprice">￥{{item.currentPrice}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="details-foot">
+    <view class="foot-left">
+      <view class="foot-box foot-line">
+        <image class="foot-img" src="../../static/icon/service@2x.png"></image>
+        <view class="foot-text">客服</view>
+      </view>
+      <view class="foot-box" bindtap="theCollect">
+        <image class="foot-img" src="../../static/icon/collection@2x.png">
+          <image wx:if="{{isCollect}}" class="foot-img-isC" src="../../static/icon/star@2x.png"></image>
+        </image>
+        <view class="foot-text">收藏</view>
+      </view>
+    </view>
+    <view class="foot-right">
+      <view class="foot-shoppingcart" bindtap="joinCart">
+        加入购物车
+      </view>
+      <view class="foot-buy" bindtap="buy">
+        立即购买
+      </view>
+    </view>
+  </view>
+</view>

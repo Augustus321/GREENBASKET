@@ -1,0 +1,69 @@
+/* pages/addsite/addsite.wxss */
+.addsite-info{
+  padding: 0 20rpx;
+}
+.set-site{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #9f9ea4;
+  letter-spacing: 2rpx;
+}
+.set-input {
+  line-height: 90rpx;
+  border-bottom: 1rpx solid #9f9ea4;
+  height: 90rpx;
+  font-size: 26rpx;
+  letter-spacing: 2rpx;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.input-pl{
+  line-height: 90rpx;
+  letter-spacing: 2rpx;
+  font-size: 26rpx;
+}
+.set-default{
+  height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.set-default-text{
+  font-size: 26rpx;
+  letter-spacing: 2rpx;
+}
+/*swtich整体大小*/
+.wx-switch-input{
+width:82rpx !important;
+height:40rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+width:80rpx !important;
+height: 36rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+width: 40rpx !important;
+height: 36rpx !important;
+}
+
+.addsite-bot {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: #8bc66a;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 35rpx;
+}
+button{
+  line-height: 100rpx;
+  background: #8bc66a;
+  font-size: 26rpx;
+  color: #ffffff;
+}

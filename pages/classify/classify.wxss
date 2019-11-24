@@ -1,0 +1,75 @@
+/* pages/classify/classify.wxss */
+
+.classify-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-select {
+  width: 290rpx;
+  background: #fff;
+  border-right: 1px #e1e1e1 solid;
+}
+
+.select-item {
+  height: 140rpx;
+  line-height: 140rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #3e4349;
+}
+
+.right-content {
+  padding: 20rpx 20rpx 0;
+}
+
+.content-box {
+  display: none;
+}
+
+.content-item {
+  box-sizing: border-box;
+  padding: 15rpx;
+  width: 250rpx;
+  height: 250rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom:15rpx;
+}
+.content-box .content-item:nth-child(even){
+  margin-left: 10rpx;
+}
+
+.content-item-img {
+  width: 220rpx;
+  height: 180rpx;
+  margin-bottom: 12rpx;
+}
+
+.content-item-text {
+  font-size: 24rpx;
+  color: #3e4349;
+  text-align: center;
+}
+
+.classify-block {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.classify-tab {
+  background: #efefef;
+  position: relative;
+}
+
+.classify-tab::before {
+  content: "";
+  display: block;
+  width: 25rpx;
+  height: 140rpx;
+  background: #8bc66a;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

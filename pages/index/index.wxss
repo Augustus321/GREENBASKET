@@ -1,0 +1,146 @@
+/**index.wxss**/
+
+swiper-item {
+  width: 100%;
+  height: 220rpx;
+}
+swiper-item img{
+  width: 100%;
+  height: 220rpx !important;
+}
+.swiper-img{
+  width: 100%;
+  height: 220rpx;
+}
+.index-box {
+  padding: 0 20rpx;
+}
+
+.fn {
+  margin: 40rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fn-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fn-box image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 20rpx;
+  border-radius: 50%;
+}
+
+.fn-box text {
+  font-size: 24rpx;
+  color: #3e4349;
+}
+
+.poster {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.big-poster {
+  width: 345rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
+
+.small-poster {
+  display: flex;
+  justify-content: space-between;
+  width: 345rpx;
+  margin-top: 20rpx;
+}
+
+.small-poster image {
+  width: 165rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
+
+.preferential {
+  margin: 32rpx 0 40rpx 0;
+}
+
+.preferential-poster {
+  margin-top: 20rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #3e4349;
+}
+
+.content {
+  margin-bottom: 40rpx;
+}
+
+.content-title {
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-title .content-name {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #3e4349;
+}
+
+.content-title .content-more {
+  font-size: 24rpx;
+  color: #8bc66a;
+}
+
+.content-title .content-more text:first-child {
+  margin-right: 10rpx;
+}
+.content-content{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+.content-item {
+  background: #fff;
+  padding: 5rpx;
+  border-radius: 10rpx;
+  margin: 0 5rpx;
+}
+
+.content-item-img {
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.content-item-title {
+  font-size: 24rpx;
+  color: #3e4349;
+  margin-bottom: 10rpx;
+}
+
+.content-item-message {
+  font-size: 26rpx;
+  color: #ff9000;
+  margin-bottom: 10rpx;
+}
+
+.content-item-quantity {
+  font-size: 24rpx;
+  color: #3e4349;
+}
+
+.content-content .content-item:first-child{
+  margin-left: 0;
+}
+.content-content .content-item:last-child{
+  margin-right: 0;
+}

@@ -1,0 +1,160 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="mine-information">
+    <view class="mine-top-background"></view>
+    <view class="mine-information-main">
+      <view class="mine-information-main-top">
+        <view class="mine-information-main-mine">
+          <view class="mine-information-main-mine-left">
+            <image class="mine-head" src="{{userInfo.avatarUrl}}"></image>
+            <view class="mine-text">
+              <view class="mine-name">{{userInfo.nickName}}</view>
+              <view class="mine-intro">开启美好的一天</view>
+            </view>
+          </view>
+          <view class="mine-information-main-mine-right">
+            <image class="mine-right-img" src="{{deimg.a}}"></image>
+            <image class="mine-right-img mine-right-img-margin" src="{{deimg.b}}"></image>
+          </view>
+        </view>
+        <view class="mine-information-main-message">
+          <view class="mine-message-main" bindtap="goCollect">
+            <view class="mine-message-main-num">{{collectAll.length}}</view>
+            <view class="mine-message-main-text">我的收藏</view>
+          </view>
+          <view class="mine-message-main">
+            <view class="mine-message-main-num">50.00</view>
+            <view class="mine-message-main-text">我的账户</view>
+          </view>
+          <view class="mine-message-main">
+            <view class="mine-message-main-num">25</view>
+            <view class="mine-message-main-text">我的足迹</view>
+          </view>
+        </view>
+      </view>
+      <view class="mine-information-main-bot">
+        <view class="mine-bot-member">
+          <image class="mine-bot-img" src="{{deimg.c}}"></image>
+          <view class="mine-bot-text">会员中心</view>
+        </view>
+        <view class="mine-bot-member">
+          <image class="mine-bot-img" src="{{deimg.d}}"></image>
+          <view class="mine-bot-text">VIP俱乐部</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="mine-advertising">
+    <image class="mine-advertising-img" src="{{deimg.o}}"></image>
+  </view>
+  <view class="mine-order">
+    <view class="mine-order-top">
+      <view class="mine-order-top-title">我的订单</view>
+      <view class="mine-order-top-all">全部订单 ></view>
+    </view>
+    <view class="mine-order-bot">
+      <view class="mine-order-bot-item">
+        <image class="mine-order-bot-img" src="{{deimg.e}}"></image>
+        <view class="mine-order-bot-text">待付款</view>
+      </view>
+      <view class="mine-order-bot-item">
+        <image class="mine-order-bot-img" src="{{deimg.f}}"></image>
+        <view class="mine-order-bot-text">待发货</view>
+      </view>
+      <view class="mine-order-bot-item">
+        <image class="mine-order-bot-img" src="{{deimg.g}}"></image>
+        <view class="mine-order-bot-text">已发货</view>
+      </view>
+      <view class="mine-order-bot-item">
+        <image class="mine-order-bot-img" src="{{deimg.h}}"></image>
+        <view class="mine-order-bot-text">待自提</view>
+      </view>
+      <view class="mine-order-bot-item">
+        <image class="mine-order-bot-img" src="{{deimg.p}}"></image>
+        <view class="mine-order-bot-text">退货/售后</view>
+      </view>
+    </view>
+  </view>
+  <view class="mine-set">
+    <view class="mine-set-item" bindtap="goSite">
+      <view class="mine-set-left">
+        <image class="mine-set-left-img" src="{{deimg.i}}"></image>
+        <view class="mine-set-left-text">配送地址</view>
+      </view>
+      <view class="mine-set-right">
+        <view class="mine-set-right-text">></view>
+      </view>
+    </view>
+    <view class="mine-set-item">
+      <view class="mine-set-left">
+        <image class="mine-set-left-img" src="{{deimg.j}}"></image>
+        <view class="mine-set-left-text">优惠券</view>
+      </view>
+      <view class="mine-set-right">
+        <view class="mine-set-right-text">每月更新，立享优惠 ></view>
+      </view>
+    </view>
+    <view class="mine-set-item">
+      <view class="mine-set-left">
+        <image class="mine-set-left-img" src="{{deimg.k}}"></image>
+        <view class="mine-set-left-text">每日签到</view>
+      </view>
+      <view class="mine-set-right">
+        <view class="mine-set-right-text">去签到 ></view>
+      </view>
+    </view>
+    <view class="mine-set-item">
+      <view class="mine-set-left">
+        <image class="mine-set-left-img" src="{{deimg.l}}"></image>
+        <view class="mine-set-left-text">加入我们</view>
+      </view>
+      <view class="mine-set-right">
+        <view class="mine-set-right-text">为梦想而生，为颠覆而来 ></view>
+      </view>
+    </view>
+    <view class="mine-set-item">
+      <view class="mine-set-left">
+        <image class="mine-set-left-img" src="{{deimg.m}}"></image>
+        <view class="mine-set-left-text">帮助与建议</view>
+      </view>
+      <view class="mine-set-right">
+        <view class="mine-set-right-text">></view>
+      </view>
+    </view>
+    <view class="mine-set-item">
+      <view class="mine-set-left">
+        <image class="mine-set-left-img" src="{{deimg.n}}"></image>
+        <view class="mine-set-left-text">联系我们</view>
+      </view>
+      <view class="mine-set-right">
+        <view class="mine-set-right-text">></view>
+      </view>
+    </view>
+  </view>
+  <view class="mine-recommend">
+    <view class="mine-recommend-title">
+      <image class="mine-recommend-title-img" src="{{deimg.q}}"></image>
+      <view class="mine-recommend-title-text">猜你喜欢 · </view>
+      <view class="mine-recommend-title-eng">EXPLORE</view>
+      <image class="mine-recommend-title-img" src="{{deimg.q}}"></image>
+    </view>
+    <view class="mine-recommend-main">
+    <block wx:for="{{tjSource}}" wx:key="{{index}}">
+      <view class="mine-recommend-main-item" data-index="{{index}}" bindtap="goDetails">
+        <image class="mine-recommend-main-img" src="{{item.picture}}"></image>
+        <view class="mine-recommend-main-title">{{item.commodityName}}</view>
+        <view class="mine-recommend-main-des">{{item.description}}</view>
+        <view class="mine-recommend-main-label">
+          <view class="mine-recommend-main-label-first">买1赠1</view>
+          <view class="mine-recommend-main-label-second">明日送达</view>
+        </view>
+        <view class="mine-recommend-main-price">
+          <view class="mine-recommend-main-newprice">￥{{item.discountPrice}}</view>
+          <view class="mine-recommend-main-quantity">/500g</view>
+          <view class="mine-recommend-main-oldprice">￥{{item.number}}</view>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+</view>

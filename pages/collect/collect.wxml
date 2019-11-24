@@ -1,0 +1,51 @@
+<!--pages/collect/collect.wxml-->
+<view class="container">
+  <view class="manage">
+    <view class="manage-left">
+      <view class="manage-left-type">
+        <view class="left-type-text">全部类目</view>
+        <image class="left-type-img" src="{{url}}/resource/img/weixin/xcx/collect/down@2x.png"></image>
+      </view>
+      <view class="manage-left-type">
+        <view class="left-type-text">降价</view>
+        <image class="left-type-img" src="{{url}}/resource/img/weixin/xcx/collect/down@2x.png"></image>
+      </view>
+    </view>
+    <view wx:if="{{isdel}}" class="container-manage-right" bindtap="ndel">
+      管理
+    </view>
+    <view wx:else class="container-manage-right"  bindtap="ndel">
+    取消
+    </view>
+  </view>
+  <view class="collect-main">
+  <block wx:for="{{collectAll}}" wx:key="{{index}}">
+    <view class="collect-item">
+      <image class="collect-item-img" src="{{item.picture}}"></image>
+      <view class="collect-item-right">
+        <view class="collect-item-top">
+          <view class="collect-item-title">
+            {{item.commodityName}}
+          </view>
+          <view class="collect-item-des">
+           {{item.description}}
+          </view>
+        </view>
+        <view class="collect-item-bot">
+          <view class="collect-item-label">
+            <view class="collect-item-label-bao">{{item.discount}}</view>
+            <view class="collect-item-label-bao">{{item.recommend}}</view>
+          </view>
+          <view class="collect-item-price">
+            <view class="collect-item-price-left">
+              <view class="collect-item-price-num">￥{{item.discountPrice}}</view>
+              <view class="collect-item-price-quantity">/500g</view>
+            </view>
+            <view class="collect-item-price-right">1033人收藏</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

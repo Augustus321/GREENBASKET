@@ -1,0 +1,98 @@
+<!--pages/shopping-cart/shopping-cart.wxml-->
+<view class="container">
+  <view wx:if="{{have}}" class="cart-none">
+    <view class="cart-none-bg"></view>
+    <view class="cart-none-top">
+      <view class="cart-none-main">
+        <image class="cart-none-img" src="{{shimg.a}}"></image>
+        <view class="cart-none-title">购物车竟然是空的</view>
+        <view class="cart-none-des">
+          再忙，也要记得买点什么犒赏自己~
+        </view>
+      </view>
+    </view>
+    <scroll-view scroll-y style="height:calc(100% - 174rpx)">
+      <view class="mine-recommend">
+        <view class="mine-recommend-title">
+          <image class="mine-recommend-title-img"  src="{{shimg.b}}"></image>
+          <view class="mine-recommend-title-text">猜你喜欢 · </view>
+          <view class="mine-recommend-title-eng">EXPLORE</view>
+          <image class="mine-recommend-title-img"  src="{{shimg.b}}"></image>
+        </view>
+        <view class="mine-recommend-main">
+          <block wx:for="{{tjSource}}" wx:key="{{index}}">
+            <view class="mine-recommend-main-item" data-index="{{index}}" bindtap="goDetails">
+              <image class="mine-recommend-main-img" src="{{item.picture}}"></image>
+              <view class="mine-recommend-main-title">{{item.commodityName}}</view>
+              <view class="mine-recommend-main-des">{{item.description}}</view>
+              <view class="mine-recommend-main-label">
+                <view class="mine-recommend-main-label-first">买1赠1</view>
+                <view class="mine-recommend-main-label-second">明日送达</view>
+              </view>
+              <view class="mine-recommend-main-price">
+                <view class="mine-recommend-main-newprice">￥{{item.discountPrice}}</view>
+                <view class="mine-recommend-main-quantity">/500g</view>
+                <view class="mine-recommend-main-oldprice">￥{{item.number}}</view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view wx:else class="cart-has">
+    <view class="cart-none-bg"></view>
+    <view class="cart-has-box">
+      <view class="cart-has-main">
+        <scroll-view scroll-y style="height:940rpx;">
+          <block wx:for="{{shoppingCart}}" wx:key="{{index}}">
+            <view class="cart-has-main-item">
+              <checkbox-group data-index="{{index}}"  bindchange="checkboxChange">
+                <checkbox value="{{item.checked}}" checked="{{item.checked}}"></checkbox>
+              </checkbox-group>
+              <view class="cart-has-main-item-mid">
+                <image class="cart-has-img" src="{{item.picture}}"></image>
+                <view class="cart-has-mid-text">
+                  <view class="cart-has-mid-title">
+                    {{item.commodityName}}
+                  </view>
+                  <view class="cart-has-mid-qua">
+                    500g
+                  </view>
+                  <view class="cart-has-mid-bot">
+                    <view class="cart-has-mid-price">
+                      ￥{{item.sum}}
+                    </view>
+                    <counter num="{{item.number}}" bind:change="handleCounterChange" data-index="{{index}}"></counter>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="cart-bot">
+      <view class="cart-bot-left">
+      <checkbox-group bindchange="ckecboxAll">
+        <checkbox value="{{isAllSel}}" checked="{{isAllSel}}"></checkbox>
+        </checkbox-group>
+        <view class="cart-bot-all">
+          全选
+        </view>
+        <image bindtap="delShop" class="{{selArr == false ? 'op cart-bot-img' : 'cart-bot-img'}}" src="{{shimg.c}}"></image>
+      </view>
+      <view class="cart-bot-right">
+        <view class="cart-bot-sum">
+          合计：
+        </view>
+        <view class="cart-bot-price">
+          ￥{{total}}
+        </view>
+        <view class="cart-bot-buy">
+          结算
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

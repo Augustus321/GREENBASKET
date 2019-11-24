@@ -1,0 +1,11 @@
+<view class="Nav" style="height: {{navH}}px; padding-top: {{statusBarHeight}}px; ">
+  <view class="site">
+    <image class="site-img" src="../../static/icon/dingwei.png"></image>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="site-text">{{text}}</view>
+    </picker>
+    <image class="site-select" src="../../static/icon/xiala.png"></image>
+  </view>
+  <input placeholder="新鲜白菜" bindconfirm="handleSeachInputConfirm" placeholder-class="input-pla" bindtap="goSearchRes"></input>
+  <image class="nav-icon" src="../../static/icon/erweima.png"></image>
+</view>

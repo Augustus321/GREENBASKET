@@ -1,0 +1,116 @@
+/* pages/search-res/search-res.wxss */
+.manage{
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  align-items: center;
+}
+.manage-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.manage-left-type{
+  margin-right: 60rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left-type-text{
+  font-size: 30rpx;
+}
+.left-type-img{
+  width: 10rpx;
+  height: 9rpx;
+  margin-left: 10rpx;
+}
+.container-manage-right{
+  font-size: 30rpx;
+}
+.manage-right-img{
+  width: 55rpx;
+  height: 50rpx;
+}
+.search-res{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.search-res-item{
+  margin-bottom: 20rpx;
+}
+.search-res-item-img{
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  width: 320rpx;
+  height: 300rpx;
+}
+.search-res-item-info{
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  background: #ffffff;
+  padding: 20rpx;
+}
+.search-res-item-title{
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #3e4349;
+  font-weight: 400;
+}
+.search-res-item-label{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.saerch-res-item-label-ora{
+  font-size: 22rpx;
+  color: #ff9000;
+  border: 1rpx solid #ff9000;
+  padding: 0 5rpx;
+  border-radius: 5rpx;
+  margin-right: 10rpx;
+}
+.search-res-item-label-gre{
+  font-size: 22rpx;
+  color: #8bc66a;
+  border: 1rpx solid #8bc66a;
+  padding: 0 5rpx;
+  border-radius: 5rpx;
+}
+.search-res-item-price{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.seach-res-item-price-rmb{
+  font-size: 30rpx;
+  color: #ff9000;
+  font-weight: bold;
+}
+.search-res-item-price-quantity{
+  font-size: 24rpx;
+  color: #9f9ea4;
+}
+.search-res-item-bot{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.search-res-item-bot-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search-res-item-bot-num{
+  font-size: 22rpx;
+  color: #9f9ea4;
+  margin-right: 20rpx;
+}
+.search-res-item-bot-img{
+  width: 40rpx;
+  height: 40rpx;
+}

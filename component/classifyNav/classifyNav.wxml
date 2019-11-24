@@ -1,0 +1,3 @@
+<view class="Nav" style="height: {{navH}}px; padding-top: {{statusBarHeight}}px; ">
+    <input placeholder="白菜" bindconfirm="handleSeachInputConfirm" placeholder-class="input-pla" bindtap="goSearchRes"></input>
+</view>

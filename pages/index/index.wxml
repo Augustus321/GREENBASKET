@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <Nav bind:size="handleNavSize" text="{{city}}" />
+  </view>
+  <view style="height:calc(100% - {{navH}}px)">
+    <scroll-view scroll-y style="height:100%">
+      <swiper style="height:240rpx;" indicator-dots indicator-color="orange" indicator-active-color="white" autoplay>
+        <swiper-item>
+          <image class="swiper-img" src="{{url}}/resource/img/weixin/xcx/index/banner_01@2x.png" mode="aspectFill"></image>
+        </swiper-item>
+        <swiper-item>
+         <image class="swiper-img" src="{{url}}/resource/img/weixin/xcx/index/banner_02@2x.png" mode="aspectFill"></image>
+        </swiper-item>
+        <swiper-item>
+          <image class="swiper-img" src="{{url}}/resource/img/weixin/xcx/index/banner_03@2x.png" mode="aspectFill"></image>
+        </swiper-item>
+      </swiper>
+      <view class="index-box">
+        <view class="fn">
+          <view class="fn-box">
+            <image src="{{url}}/resource/img/weixin/xcx/index/icon_01@2x.png"></image>
+            <text>到点自提</text>
+          </view>
+          <view class="fn-box">
+            <image src="{{url}}/resource/img/weixin/xcx/index/icon_02@2x.png"></image>
+            <text>减免配送费</text>
+          </view>
+          <view class="fn-box">
+            <image src="{{url}}/resource/img/weixin/xcx/index/icon_03@2x.png"></image>
+            <text>跑腿代购</text>
+          </view>
+          <view class="fn-box">
+            <image src="{{url}}/resource/img/weixin/xcx/index/icon_05@2x.png"></image>
+            <text>津贴补助</text>
+          </view>
+        </view>
+        <view class="poster">
+          <image class="big-poster" bindtap="goDetails" src="{{url}}/resource/img/weixin/xcx/index/tuijian_01@2x.png"></image>
+          <image class="big-poster" bindtap="goDetails" src="{{url}}/resource/img/weixin/xcx/index/tuijian_02@2x.png"></image>
+        </view>
+        <view class="preferential">
+          <text class="title">优惠专区</text>
+          <view class="poster preferential-poster">
+            <image class="big-poster" bindtap="goDetails" src="{{url}}/resource/img/weixin/xcx/index/youhui_01@2x.png"></image>
+            <image class="big-poster" bindtap="goDetails" src="{{url}}/resource/img/weixin/xcx/index/youhui_02@2x.png"></image>
+            <view class="small-poster">
+              <image bindtap="goDetails" src="{{url}}/resource/img/weixin/xcx/index/youhui_03@2x.png"></image>
+               <image bindtap="goDetails" src="{{url}}/resource/img/weixin/xcx/index/youhui_04@2x.png"></image>
+            </view>
+            <view class="small-poster">
+              <image bindtap="goDetails" src="{{url}}/resource/img/weixin/xcx/index/youhui_05@2x.png"></image>
+               <image bindtap="goDetails" src="{{url}}/resource/img/weixin/xcx/index/youhui_06@2x.png"></image>
+            </view>
+          </view>
+        </view>
+        <view class="content">
+          <view class="content-box" wx:for="{{ify}}" wx:for-item="q" wx:for-index="i" wx:key="{{index}}">
+            <view class="content-title">
+              <text class="content-name">{{q.title}}</text>
+              <view class="content-more">
+                <text>更多</text>
+                <text>></text>
+              </view>
+            </view>
+            <view class="content-content">
+              <view class="content-item" wx:for="{{q.ifys}}" wx:for-item="w" wx:for-index="j" wx:key="{{j}}">
+                <cover-image class="content-item-img" src="{{w.imgUrl}}" mode="aspectFill"></cover-image>
+                <view class="content-item-title">{{w.name}}</view>
+                <view class="content-item-message">
+                  <text class="content-item-price">￥{{w.price}}</text>
+                  <text class="content-item-quantity">/{{w.quantity}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

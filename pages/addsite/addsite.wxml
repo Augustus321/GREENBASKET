@@ -1,0 +1,20 @@
+<!--pages/addsite/addsite.wxml-->
+<view class="container">
+  <form bindsubmit="setSite">
+    <view class="addsite-info">
+      <view class="set-site" bindtap="choiceSite">
+      <label name="address">{{address}}</label>
+      </view>
+      <input class="set-input" placeholder-class="input-pl" placeholder="请输入收货人姓名" name="name"></input>
+      <input class="set-input" placeholder-class="input-pl" placeholder="请输入联系方式" name="tel"></input>
+      <input class="set-input" placeholder-class="input-pl" placeholder="请输入详细地址，例：16号楼5层501室" name="info"></input>
+      <view class="set-default">
+        <view class="set-default-text">设为默认地址</view>
+        <switch bindchange="myswitch" name="isDefault"></switch>
+      </view>
+    </view>
+    <view class="addsite-bot">
+      <button formType="submit">保存</button>
+    </view>
+  </form>
+</view>

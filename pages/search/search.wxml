@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="search-input-box">
+    <input class="search-input" placeholder="请输入关键词" placeholder-class="inpl" confirm-type="search" bindconfirm="handleEvents">
+      <image class="search-img" src="../../static/icon/search.png"></image>
+    </input>
+  </view>
+    <view class="hots">
+    <block wx:for="{{hots}}" wx:key="{{index}}">
+      <view class="keywords" data-text="{{item}}" bindtap="handleEvents">{{item}}</view>
+    </block>
+  </view>
+</view>

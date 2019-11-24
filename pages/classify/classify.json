@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "classifyNav": "../../component/classifyNav/classifyNav"
+  },
+  "navigationStyle": "custom"
+}

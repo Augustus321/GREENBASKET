@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Nav": "../../component/Nav/Nav"
+  },
+  "navigationStyle": "custom"
+}

@@ -1,0 +1,20 @@
+<view class="container">
+  <view>
+    <classifyNav bind:size="handleNavSize" />
+  </view>
+  <view class="classify-box" style="height:calc(100% - {{navH}}px)">
+    <view class="left-select">
+      <view wx:for="{{info}}" wx:for-item="q" wx:for-index="i" wx:key="{{i}}" class="{{tabId == i ? 'select-item classify-tab' : 'select-item' }}" data-id="{{i}}" bindtap="handleClass">
+        {{q.title}}
+      </view>
+    </view>
+    <scroll-view class="right-content" scroll-y enable-flex>
+      <view wx:for="{{info}}" wx:for-item="w" wx:for-index="j" wx:key="{{j}}" class="{{tabId == j ? 'content-box classify-block' : 'content-box' }}" data-id="{{j}}">
+        <view wx:for="{{w.infos}}" wx:for-item="e" wx:for-index="m" wx:key="{{m}}" data-id="{{e.commodityId}}" class="content-item" bindtap="goDetails">
+          <image class="content-item-img" src="{{e.picture}}"></image> 
+          <view class="content-item-text">{{e.commodityName}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

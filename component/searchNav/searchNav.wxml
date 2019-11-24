@@ -1,0 +1,4 @@
+<view class="Nav" style="height: {{navH}}px; padding-top: {{statusBarHeight}}px; ">
+  <image class="Nav-img" src="{{url}}/resource/img/weixin/xcx/collect/more@2x.png" bindtap="goBack"></image>
+    <input placeholder="白菜" bindconfirm="handleSeachInputConfirm" placeholder-class="input-pla" focus='{true}' value="{{value}}"></input>
+</view>

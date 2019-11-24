@@ -1,0 +1,100 @@
+/* pages/collect/collect.wxss */
+.manage{
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  align-items: center;
+}
+.manage-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.manage-left-type{
+  margin-right: 60rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left-type-text{
+  font-size: 30rpx;
+}
+.left-type-img{
+  width: 10rpx;
+  height: 9rpx;
+    margin-left: 10rpx;
+}
+.container-manage-right{
+  font-size: 30rpx;
+}
+.collect-main{
+  background: #ffffff;
+}
+.collect-item{
+  background: #ffffff;
+  padding: 0 60rpx 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.collect-item-img{
+  width: 300rpx;
+  height: 230rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #3e4349;
+}
+.collect-item-right{
+  margin-left: 30rpx;
+  padding: 20rpx 0;
+  width: 330rpx;
+
+}
+.collect-item-top{
+  margin-bottom: 35rpx;
+}
+.collect-item-title{
+  font-size: 30rpx;
+  color: #3e4349;
+  margin-bottom: 10rpx;
+}
+.collect-item-des{
+  font-size: 22rpx;
+  color: #9f9ea4;
+}
+.collect-item-label{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+.collect-item-label-bao{
+  padding: 0 5rpx;
+  border: 1rpx solid #ff9000;
+  border-radius: 5rpx;
+  color: #ff9000;
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.collect-item-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.collect-item-price-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.collect-item-price-num{
+  font-size: 30rpx;
+  color: #ff9000;
+}
+.collect-item-price-quantity{
+  font-size: 22rpx;
+  color: #9f9ea4;
+}
+.collect-item-price-right{
+  font-size: 22rpx;
+  color: #9f9ea4;
+}
